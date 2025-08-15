@@ -29,7 +29,7 @@ public class TarefaServices {
     // Anotação para GET
     // Para chamar minha API de buscar todas eu uso --> /tarefas/buscar-todos <-- 
     @GetMapping("/buscar-todos")
-    public ResponseEntity<?> buscarTodas() {
+    public ResponseEntity<?> buscarTodos() {
         // Uso o repository para buscar todas as tarefas
         return ResponseEntity.ok(tarefaRepository.findAll());
     }
@@ -56,7 +56,7 @@ public class TarefaServices {
         return tarefaRepository.findById(id).map(
             // Procuro pelo id e o que eu achar eu altero os atributos
             tarefa -> {
-                // Pego o atrbuto antigo e coloco o que veio no novo
+                // Pego o atributo antigo e coloco o que veio no novo
                 tarefa.setTitulo(novaTarefa.getTitulo());
                 // Coloca todo o resto que veio novo
                 // Nova descrição

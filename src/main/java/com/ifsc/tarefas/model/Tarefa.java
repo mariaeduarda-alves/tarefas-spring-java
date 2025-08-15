@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 
 
 
-// Entidade do banco, cria uma tabela em nosso bacno e os atributos dela
+// Entidade do banco, cria uma tabela em nosso banco e os atributos dela
 @Entity
 public class Tarefa {
     
